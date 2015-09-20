@@ -15,6 +15,7 @@
 		69D83B731BAF629D0058D5A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D83B711BAF629D0058D5A4 /* LaunchScreen.xib */; };
 		69D83B7F1BAF629D0058D5A4 /* CoreDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D83B7E1BAF629D0058D5A4 /* CoreDataServiceTests.swift */; };
 		69D83B8A1BAF63D60058D5A4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D83B891BAF63D60058D5A4 /* CoreDataService.swift */; };
+		69D83B8C1BAF647C0058D5A4 /* TestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D83B8B1BAF647C0058D5A4 /* TestEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		69D83B7D1BAF629D0058D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69D83B7E1BAF629D0058D5A4 /* CoreDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceTests.swift; sourceTree = "<group>"; };
 		69D83B891BAF63D60058D5A4 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		69D83B8B1BAF647C0058D5A4 /* TestEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				69D83B711BAF629D0058D5A4 /* LaunchScreen.xib */,
 				69D83B671BAF629D0058D5A4 /* CoreDataService.xcdatamodeld */,
 				69D83B631BAF629D0058D5A4 /* Supporting Files */,
+				69D83B8B1BAF647C0058D5A4 /* TestEntity.swift */,
 			);
 			path = CoreDataService;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D83B8C1BAF647C0058D5A4 /* TestEntity.swift in Sources */,
 				69D83B8A1BAF63D60058D5A4 /* CoreDataService.swift in Sources */,
 				69D83B6B1BAF629D0058D5A4 /* ViewController.swift in Sources */,
 				69D83B691BAF629D0058D5A4 /* CoreDataService.xcdatamodeld in Sources */,

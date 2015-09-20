@@ -12,7 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        CoreDataService.deleteAllEntities("TestEntity")
+        let test1 = CoreDataService.managedObjectWithEntityName("TestEntity") as? TestEntity
+        test1?.title = "Test 1 title"
+        let test2 = CoreDataService.managedObjectWithEntityName("TestEntity") as? TestEntity
+        test2?.title = "Test 2 title"
+        CoreDataService.saveNewChanges()
+        let numberOfManagedObjects = CoreDataService.fetchManagedObjects(entityName: "TestEntity")?.count
+        println("number of managed objects: \(numberOfManagedObjects)")
     }
 
     override func didReceiveMemoryWarning() {
