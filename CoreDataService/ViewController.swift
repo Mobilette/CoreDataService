@@ -13,13 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        MBCoreDataService.deleteAllEntities("TestEntity")
-        let test1 = MBCoreDataService.managedObjectWithEntityName("TestEntity") as? TestEntity
+        let coreDataService = MBCoreDataService.sharedInstance
+        coreDataService.deleteAllEntities("TestEntity")
+        let test1 = coreDataService.managedObjectWithEntityName("TestEntity") as? TestEntity
         test1?.title = "Test 1 title"
-        let test2 = MBCoreDataService.managedObjectWithEntityName("TestEntity") as? TestEntity
+        let test2 = coreDataService.managedObjectWithEntityName("TestEntity") as? TestEntity
         test2?.title = "Test 2 title"
-        MBCoreDataService.saveNewChanges()
-        let numberOfManagedObjects = MBCoreDataService.fetchManagedObjects(entityName: "TestEntity")?.count
+        coreDataService.saveNewChanges()
+        let numberOfManagedObjects = coreDataService.fetchManagedObjects(entityName: "TestEntity")?.count
         println("number of managed objects: \(numberOfManagedObjects)")
     }
 

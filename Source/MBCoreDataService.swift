@@ -13,28 +13,24 @@ public class MBCoreDataService
 {
     // MARK: - Property
     
-    static var managedObjectContext: NSManagedObjectContext? {
-        if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-            return appDelegate.managedObjectContext
-        }
-        return nil
-    }
+    static let sharedInstance = MBCoreDataService()
+    public var managedObjectContext: NSManagedObjectContext? = nil
     
     // MARK: - Core data service
     
-    public class func managedObjectWithEntityName(
+    public func managedObjectWithEntityName(
         entityName: String
         ) -> NSManagedObject?
     {
-        if let managedObjectContext = MBCoreDataService.managedObjectContext {
+        if let managedObjectContext = self.managedObjectContext {
             return NSEntityDescription.insertNewObjectForEntityForName(entityName, inManagedObjectContext: managedObjectContext) as? NSManagedObject
         }
         return nil
     }
     
-    public class func saveNewChanges() -> NSError?
+    public func saveNewChanges() -> NSError?
     {
-        if let managedObjectContext = MBCoreDataService.managedObjectContext {
+        if let managedObjectContext = self.managedObjectContext {
             var error: NSError? = nil
             if managedObjectContext.hasChanges && managedObjectContext.save(&error) {
                 return nil
@@ -44,7 +40,7 @@ public class MBCoreDataService
         return CoreDataServiceError.ManagedObjectContextIsNil.error
     }
     
-    public class func fetchManagedObjects(
+    public func fetchManagedObjects(
         #entityName: String,
         predicate: NSPredicate? = nil,
         sort: [NSSortDescriptor]? = nil
@@ -53,7 +49,7 @@ public class MBCoreDataService
         var fetchRequest: NSFetchRequest = NSFetchRequest(entityName: entityName)
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sort
-        if let managedObjectContext = MBCoreDataService.managedObjectContext {
+        if let managedObjectContext = self.managedObjectContext {
             var error: NSError? = nil
             if let entities = managedObjectContext.executeFetchRequest(fetchRequest, error:&error) as? [NSManagedObject] {
                 return entities
@@ -63,9 +59,9 @@ public class MBCoreDataService
         return nil
     }
     
-    public class func deleteAllEntities(entityName: String) -> NSError?
+    public func deleteAllEntities(entityName: String) -> NSError?
     {
-        if let managedObjectContext = MBCoreDataService.managedObjectContext {
+        if let managedObjectContext = self.managedObjectContext {
             let fetchRequest = NSFetchRequest(entityName: entityName)
             fetchRequest.includesPendingChanges = false
             var fetchRequestError: NSError? = nil
