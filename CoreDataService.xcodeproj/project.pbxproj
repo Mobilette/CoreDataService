@@ -14,6 +14,7 @@
 		69D83B701BAF629D0058D5A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D83B6F1BAF629D0058D5A4 /* Images.xcassets */; };
 		69D83B731BAF629D0058D5A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D83B711BAF629D0058D5A4 /* LaunchScreen.xib */; };
 		69D83B7F1BAF629D0058D5A4 /* CoreDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D83B7E1BAF629D0058D5A4 /* CoreDataServiceTests.swift */; };
+		69D83B8A1BAF63D60058D5A4 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D83B891BAF63D60058D5A4 /* CoreDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		69D83B781BAF629D0058D5A4 /* CoreDataServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D83B7D1BAF629D0058D5A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69D83B7E1BAF629D0058D5A4 /* CoreDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataServiceTests.swift; sourceTree = "<group>"; };
+		69D83B891BAF63D60058D5A4 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		69D83B621BAF629D0058D5A4 /* CoreDataService */ = {
 			isa = PBXGroup;
 			children = (
+				69D83B881BAF639C0058D5A4 /* Source */,
 				69D83B651BAF629D0058D5A4 /* AppDelegate.swift */,
 				69D83B6A1BAF629D0058D5A4 /* ViewController.swift */,
 				69D83B6C1BAF629D0058D5A4 /* Main.storyboard */,
@@ -113,6 +116,15 @@
 				69D83B7D1BAF629D0058D5A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69D83B881BAF639C0058D5A4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				69D83B891BAF63D60058D5A4 /* CoreDataService.swift */,
+			);
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69D83B8A1BAF63D60058D5A4 /* CoreDataService.swift in Sources */,
 				69D83B6B1BAF629D0058D5A4 /* ViewController.swift in Sources */,
 				69D83B691BAF629D0058D5A4 /* CoreDataService.xcdatamodeld in Sources */,
 				69D83B661BAF629D0058D5A4 /* AppDelegate.swift in Sources */,
